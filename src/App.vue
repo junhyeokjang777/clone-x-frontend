@@ -18,12 +18,25 @@ export default {
     background-color: black;
     color: white;
   }
-  .container{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;  /*플렉스에서 colum은 생성물이 밑에 하나씩 생김 row로 하면 오른쪾으로 하나씩 생김 */
-    justify-content: center; /* 수직옵션end하면 가장아래, cneter하면 중간에 위치 */
-    align-items: center; /* 수평옵션으로 수평에서 가운데 왼쪽, 오른쪽 위치정함 */
+ .container {
+  height: 100vh;
+  display: flex;
 
-  }
+  /* column: 자식 요소가 위 → 아래로 쌓임 (세로 방향) 
+     row: 자식 요소가 왼쪽 → 오른쪽으로 쌓임 (기본값) */
+  flex-direction: column;
+
+  /* justify-content:
+     주축(main axis) 기준 정렬
+     column일 때 → 세로 정렬
+     center: 중앙, flex-end: 아래 */
+  justify-content: center;
+
+  /* align-items:
+     교차축(cross axis) 기준 정렬
+     column일 때 → 가로 정렬
+     center: 가운데, flex-start: 왼쪽, flex-end: 오른쪽 */
+  align-items: center;
+}
+
 </style>
